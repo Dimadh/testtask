@@ -1,0 +1,82 @@
+body{
+    font-family:Arial;
+    margin:0px;
+    padding:0px;
+}
+.form_div{
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    background-color: #EAEAEA;
+    margin-top: 10px;
+    padding: 5px 20px;
+}
+.form_div> h1 {
+    width:80%;
+    text-align:center;
+    color:#B43737;
+}
+.form_ul {
+
+}
+.form_ul > li {
+    list-style:none;
+    margin:20px 0px;
+}
+
+label.main_label {
+    width: 200px;
+    float: left;
+    text-align: right;
+    padding: 8px 10px 0px 10px;
+    color: #B6B6B6;
+    font-size: 14px;
+}
+
+label.sel_agree {
+    text-align: right;
+    padding: 8px 10px 0px 10px;
+    color: #B6B6B6;
+    font-size: 14px;
+}
+.form_ul > li input[type=text], .form_ul > li input[type=email], .form_ul > li input[type=password], #country {
+    border: none;
+    padding: 8px 13px;
+    width: 250px;
+    color: #B3B3B0;
+}
+
+.form_ul > li .required_field{
+    box-shadow:inset #FF8B79 4px 0px 0px;
+}
+
+#sign_up , #login_up{
+    padding: 8px 13px;
+    border: none;
+    width: 189px;
+    height: 46px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #2DB90A;
+    margin-left: 220px;
+}
+.nodisplay{
+    display:none;
+}
+
+span.text_error_msg {
+    color: #AE6D63;
+    font-size: 12px;
+    clear: both;
+    width: 400px;
+    margin: 0px 10px;
+    font-weight:bold;
+}
+
+#days, #months, #years {
+    border: none;
+    padding: 8px 13px;
+    width: 81px;
+    color: #B3B3B0;
+}
+
