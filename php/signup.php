@@ -16,9 +16,6 @@
 
     <title></title>
 </head>
-<style>
-    
-</style>
 <body>
 <div class="form_div">
     <form action="javascript:void(null)" method="post" id="registration" onsubmit="call()" class="validation_singupform" >
@@ -51,9 +48,9 @@
             </li>
             <li>
                 <label class="main_label">Birth date</label>
-                <select id="days" name="birth_date" ></select>
-                <select id="months" name="birth_date"></select>
-                <select id="years" name="birth_date"></select>
+                <select id="days" name="day"><option value="0">DD</option></select>
+                <select id="months" name="month"><option value="0">MM</option></select>
+                <select id="years" name="year"><option value="0">YYYY</option></select>
             </li>
             <li>
                 <label class="sel_agree" for="agree">Agree with terms and conditions:</label>
@@ -92,7 +89,7 @@
             url: 'InsertUser.php',
             data: msg,
             success: function(data) {
-                $('#registration').trigger('reset')
+                /*$('#registration').trigger('reset')*/
             },
             error:  function(xhr, str){
                 alert('Возникла ошибка: ' + xhr.responseCode);

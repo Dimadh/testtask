@@ -6,8 +6,12 @@ require_once "dbconection.php";
     $real_name = $_POST['real_name'];
     $password = $_POST['password'];
     $country = $_POST['country'];
-    $birth_date = $_POST['birth_date'];
+    $day = $_POST['day'];
+    $month = $_POST['month'];
+    $year = $_POST['year'];
     $agree = $_POST['agree'];
+
+    $dateOfBirth = $year."-". $month."-".$day;
 
 
         /*$sth_login = $dbh->prepare('SELECT * FROM registrations WHERE login = ?');
@@ -30,7 +34,7 @@ require_once "dbconection.php";
                 ':password' => password_hash($password, PASSWORD_DEFAULT),
                 ':real_name' => $real_name,
                 ':id_country' => $country,
-                ':birth_date' => $birth_date,
+                ':birth_date' => $dateOfBirth,
                 ':confirm' => $agree));
 
         
