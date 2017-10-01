@@ -11,20 +11,19 @@ body{
     margin-top: 10px;
     padding: 5px 20px;
 }
-.form_div> h1 {
+.form_div> h1{
     width:80%;
     text-align:center;
     color:#B43737;
 }
-.form_ul {
+.form_ul{
 
 }
-.form_ul > li {
+.form_ul > li{
     list-style:none;
     margin:20px 0px;
 }
-
-label.main_label {
+label.main_label{
     width: 200px;
     float: left;
     text-align: right;
@@ -32,14 +31,13 @@ label.main_label {
     color: #B6B6B6;
     font-size: 14px;
 }
-
-label.sel_agree {
+label.sel_agree{
     text-align: right;
     padding: 8px 10px 0px 10px;
     color: #B6B6B6;
     font-size: 14px;
 }
-.form_ul > li input[type=text], .form_ul > li input[type=email], .form_ul > li input[type=password], #country {
+.form_ul > li input[type=text], .form_ul > li input[type=email], .form_ul > li input[type=password], #country{
     border: none;
     padding: 8px 13px;
     width: 250px;
@@ -64,7 +62,7 @@ label.sel_agree {
     display:none;
 }
 
-span.text_error_msg {
+span.text_error_msg{
     color: #AE6D63;
     font-size: 12px;
     clear: both;
@@ -73,10 +71,29 @@ span.text_error_msg {
     font-weight:bold;
 }
 
-#days, #months, #years {
+#days, #months, #years{
     border: none;
     padding: 8px 13px;
     width: 81px;
     color: #B3B3B0;
+}
+
+.block {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+}
+
+#r_button , #s_button{
+    width: 189px;
+    height: 46px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #1a19b9;
+    margin-left:auto;
+    margin-top: auto;
 }
 
