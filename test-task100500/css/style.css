@@ -1,9 +1,9 @@
-body{
+body {
     font-family:Arial;
     margin:0px;
     padding:0px;
 }
-.form_div{
+.formDiv {
     margin: 0 auto;
     display: block;
     width: 80%;
@@ -11,19 +11,19 @@ body{
     margin-top: 10px;
     padding: 5px 20px;
 }
-.form_div> h1{
+.formDiv> h1 {
     width:80%;
     text-align:center;
     color:#B43737;
 }
-.form_ul{
+.formUl {
 
 }
-.form_ul > li{
+.formUl > li {
     list-style:none;
     margin:20px 0px;
 }
-label.main_label{
+label.mainLabel {
     width: 200px;
     float: left;
     text-align: right;
@@ -31,24 +31,24 @@ label.main_label{
     color: #B6B6B6;
     font-size: 14px;
 }
-label.sel_agree{
+label.selAgree {
     text-align: right;
     padding: 8px 10px 0px 10px;
     color: #B6B6B6;
     font-size: 14px;
 }
-.form_ul > li input[type=text], .form_ul > li input[type=email], .form_ul > li input[type=password], #country{
+.formUl > li input[type=text], .formUl > li input[type=email], .formUl > li input[type=password], #country {
     border: none;
     padding: 8px 13px;
     width: 250px;
     color: #B3B3B0;
 }
 
-.form_ul > li .required_field{
+.formUl > li .requiredField {
     box-shadow:inset #FF8B79 4px 0px 0px;
 }
 
-#sign_up , #login_up{
+#signUp , #loginUp {
     padding: 8px 13px;
     border: none;
     width: 189px;
@@ -58,11 +58,11 @@ label.sel_agree{
     color: #2DB90A;
     margin-left: 220px;
 }
-.nodisplay{
+.nodisplay {
     display:none;
 }
 
-span.text_error_msg{
+span.textErrorMsg {
     color: #AE6D63;
     font-size: 12px;
     clear: both;
@@ -71,7 +71,7 @@ span.text_error_msg{
     font-weight:bold;
 }
 
-#days, #months, #years{
+#days, #months, #years {
     border: none;
     padding: 8px 13px;
     width: 81px;
@@ -87,7 +87,7 @@ span.text_error_msg{
     margin: -125px 0 0 -125px;
 }
 
-#r_button , #s_button{
+#registerButton , #signButton {
     width: 189px;
     height: 46px;
     font-weight: bold;
