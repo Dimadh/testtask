@@ -11,7 +11,7 @@ if (isset($_POST['signUp'])){
     $day = $_POST['day'];
     $month = $_POST['month'];
     $year = $_POST['year'];
-    $agree = $_POST['agree'];
+
     $dateOfBirth = $year."-". $month."-".$day;
 
     $checkLogin = "SELECT COUNT(login) AS login FROM registrations WHERE login = :login";
@@ -42,7 +42,6 @@ if (isset($_POST['signUp'])){
                 real_name, 
                 id_country, 
                 birth_date, 
-                confirm, 
                 timestamp
             ) 
             VALUES (
@@ -51,8 +50,7 @@ if (isset($_POST['signUp'])){
               :password,  
               :real_name, 
               :id_country, 
-              :birth_date, 
-              :confirm, 
+              :birth_date,  
               now()
             )
        ");
@@ -62,9 +60,9 @@ if (isset($_POST['signUp'])){
             ':password' => password_hash($password, PASSWORD_DEFAULT),
             ':real_name' => $realName,
             ':id_country' => $country,
-            ':birth_date' => $dateOfBirth,
-            ':confirm' => $agree));
-        
+            ':birth_date' => $dateOfBirth
+        ));
+        $_SESSION['logedUser'] = $email;
         header('Location: /');
     }
 }

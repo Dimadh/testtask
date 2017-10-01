@@ -18,7 +18,7 @@
     <title></title>
 </head>
 <?php
-require_once "../dateBase/insertuser.php"
+require_once "../dateBase/insertuser.php";
 ?>
 <body>
 <div class="formDiv">
@@ -48,6 +48,7 @@ require_once "../dateBase/insertuser.php"
                 <label class="mainLabel" for="country">Country</label>
                 <select name="country" id="country" class="country requiredField">
                 <option value="0">Select country</option>
+                <?php require_once "../dateBase/selectcountry.php";?>
                 </select>
             </li>
             <li>
@@ -67,21 +68,4 @@ require_once "../dateBase/insertuser.php"
     </form>
 </div>
 </body>
-<script>
-    $.ajax({
-        type: "POST",
-        url: "selectcountry.php",
-        dataType: 'json',
-        success: function (data) {
-            var allCountries = data;
-            var sectionCountries =  document.getElementById('country');
-            for (var i in allCountries){
-                var optionCountries = document.createElement("option");
-                optionCountries.innerHTML = allCountries[i][1];
-                optionCountries.setAttribute("value", allCountries[i][0]);
-                sectionCountries.appendChild(optionCountries);
-            }
-        }
-    });
-</script>
 </html>
