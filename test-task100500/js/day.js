@@ -1,3 +1,4 @@
+//Script for create birth day
 $(document).ready(function() {
     var monthNames = [ "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December" ];

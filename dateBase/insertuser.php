@@ -13,7 +13,8 @@ if (isset($_POST['signUp'])){
     $year = $_POST['year'];
 
     $dateOfBirth = $year."-". $month."-".$day;
-
+    
+    //Checking login and password for uniqueness
     $checkLogin = "SELECT COUNT(login) AS login FROM registrations WHERE login = :login";
     $stmtLogin = $dbh->prepare($checkLogin);
     $stmtLogin->bindValue(':login', $login);
@@ -33,6 +34,7 @@ if (isset($_POST['signUp'])){
         echo '<div style="color:red; margin-left: 45%">That email already exists!</div>';
     }
     else {
+        //Insert user to database
         $insertUser = $dbh->prepare("
             INSERT INTO 
             registrations (

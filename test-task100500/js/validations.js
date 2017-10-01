@@ -1,18 +1,22 @@
+//Script for field validation
 $(document).ready(function() {
+    //function for show error massage
     function showErrorMsg(fieldSel,errorMsg) {
         var errorMessageHtml = '<span class="textErrorMsg nodisplay">'+errorMsg+'</span>';
         $(fieldSel).next('.textErrorMsg').remove();
         $(fieldSel).after(errorMessageHtml);
         $(fieldSel).next('.textErrorMsg').fadeIn(700);
     }
-
+    
+    //function for remove error massage
     function removeErrorMsg(fieldSelRemove)
     {
         $(fieldSelRemove).next('.textErrorMsg').fadeOut(500,function () {
             $(fieldSelRemove).next('.textErrorMsg').remove();
         });
     }
-
+    
+    //function for validate field Login
     function validateLogin()
     {
         var loginSel = '.login';
@@ -28,6 +32,7 @@ $(document).ready(function() {
         }
      }
 
+    //function for validate field Email
     function validateEmail()
     {
         var emailSel = '.email';
@@ -44,6 +49,7 @@ $(document).ready(function() {
         }
     }
 
+    //function for validate field Real name
     function validateRealname()
     {
         var realNameSel = '.realName';
@@ -59,6 +65,7 @@ $(document).ready(function() {
         }
     }
 
+    //function for validate field Password
     function validatePassword()
     {
         var passwordSel = '.password';
@@ -74,6 +81,7 @@ $(document).ready(function() {
         }
     }
 
+    //function for validate field Confirm password
     function validateConfirmpassword()
     {
         var confirmpasswordSel = '.confirmPassword';
@@ -94,6 +102,7 @@ $(document).ready(function() {
         }
     }
 
+    //function for field validate Country
     function validateCountry()
     {
         var countrySel = '.country';
@@ -109,6 +118,7 @@ $(document).ready(function() {
         }
     }
 
+    //function for field validate Month
     function validateMonth()
     {
         var monthSel = '.month';
@@ -124,6 +134,7 @@ $(document).ready(function() {
         }
     }
 
+    //function for checkbox validate Agree
     function validateAgree()
     {
         var selVal = $('input[name=agree]:checked').val();

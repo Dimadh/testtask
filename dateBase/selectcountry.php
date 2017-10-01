@@ -1,7 +1,7 @@
 <?php
 require_once "../dateBase/dbconection.php";
 
-
+    //Select countries from database
     $countrySet = array();
     $resultSelect=$dbh->query('SELECT * from countries');
     $selectCountries = $resultSelect->fetchAll();

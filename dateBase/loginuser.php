@@ -1,6 +1,7 @@
 <?php
 require_once "dbconection.php";
 
+//User authorization
 if (isset($_POST['loginUp'])) {
     $signEmail = $_POST['signEmail'];
     $signPassword = $_POST['signPassword'];
