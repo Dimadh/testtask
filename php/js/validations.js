@@ -113,7 +113,7 @@ $(document).ready(function(){
     }
 
     $('.country').blur(validate_country);
-    $('.confirm_password').blur(validate_confirmpassword);
+    $('.confirmpassword').blur(validate_confirmpassword);
     $('.password').blur(validate_password);
     $('.login').blur(validate_login);
     $('.email').blur(validate_email);

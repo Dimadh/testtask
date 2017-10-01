@@ -13,19 +13,25 @@ require_once "dbconection.php";
 
     $dateOfBirth = $year."-". $month."-".$day;
 
+        $sql = "SELECT COUNT(login) AS num FROM registrations WHERE login = :login";
+        $stmt = $dbh->prepare($sql);
 
-        /*$sth_login = $dbh->prepare('SELECT * FROM registrations WHERE login = ?');
-        $sth_login->execute(array($login));
-        var_dump($sth_login->fetchAll()['login']);*/
+//Bind the provided username to our prepared statement.
+        $stmt->bindValue(':username', $login);
 
+//Execute.
+        $stmt->execute();
 
-        /*$res = $dbh->query("SELECT * FROM registrations WHERE email = ? LIMIT 1");
-        $res->execute(array($email));
-        $l_records = $res->fetch(PDO::FETCH_ASSOC);
-        var_dump($res->fetch(PDO::FETCH_ASSOC));
-        if ($l_records){
-            echo "email занят!";
-            }else{*/
+//Fetch the row.
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+//If the provided username already exists - display error.
+//TO ADD - Your own method of handling this error. For example purposes,
+//I'm just going to kill the script completely, as error handling is outside
+//the scope of this tutorial.
+if($row['num'] > 0){
+    die('That username already exists!');
+}else
             $insert_user = $dbh->prepare("INSERT INTO registrations (email, login, password,  real_name, id_country, birth_date, confirm, timestamp) 
                                     VALUES (:email, :login, :password,  :real_name, :id_country, :birth_date, :confirm, now())");
 

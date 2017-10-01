@@ -1,10 +1,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <?php
 require_once "dbconection.php";
+
     if (isset($_POST['login_up'])){
         $a_login = $_POST['a_login'];
         $a_password = $_POST['a_password'];

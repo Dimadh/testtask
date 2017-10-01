@@ -26,10 +26,9 @@ function updateNumberOfDays(){
     for(i=1; i < days+1 ; i++){
         $('#days').append($('<option />').val(i).html(i));
     }
-    $('#message').html(monthNames[month-1]+" in the year "+year+" has <b>"+days+"</b> days");
 }
 
 function daysInMonth(month, year) {
     return new Date(year, month, 0).getDate();
-}
+    }
 });
